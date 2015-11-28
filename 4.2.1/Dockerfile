@@ -1,4 +1,4 @@
-FROM debian:wheezy
+FROM debian:jessie
 MAINTAINER Roman Atachiants "roman@misakai.com"
 
 # The versions (github branches) that should be pulled and compiled
