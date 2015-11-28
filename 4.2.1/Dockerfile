@@ -5,11 +5,11 @@ MAINTAINER Roman Atachiants "roman@misakai.com"
 ENV MONO_VERSION=mono-4.2.1.60
 
 # The dependencies needed for the compilation process, they will be deleted once the docker image is baked
-ENV SETUP_TOOLS="git autoconf libtool automake build-essential mono-devel gettext python"
+ENV SETUP_TOOLS="autoconf libtool automake build-essential mono-devel gettext python"
 WORKDIR /deploy
 
 RUN apt-get update \
-	&& apt-get install -y curl unzip s3cmd $SETUP_TOOLS \
+	&& apt-get install -y curl unzip s3cmd git $SETUP_TOOLS \
 	&& apt-key adv --keyserver pgp.mit.edu --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF \
 	&& git clone git://github.com/mono/llvm.git \
 	&& cd /deploy/llvm \
