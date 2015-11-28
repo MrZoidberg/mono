@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Roman Atachiants "roman@misakai.com"
+MAINTAINER Mikhail Merkulov "mikhail.merkulov@gmail.com"
 
 # The versions (github branches) that should be pulled and compiled
 ENV MONO_VERSION=mono-4.2.1.60
